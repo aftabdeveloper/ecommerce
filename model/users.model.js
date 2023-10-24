@@ -6,6 +6,7 @@ const userModel = Schema({
     email: {type: String, required: [true,'Email is required']},
     password: {type: String, required: [true,'Password is required']},
     token: String,
+    cart: [{type: Schema.ObjectId, ref: 'Product'}],
     createdAt: {type: Date, default: Date.now},
     updateddAt: {type: Date, default: Date.now}
 })
